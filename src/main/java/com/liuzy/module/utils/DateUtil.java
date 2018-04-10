@@ -15,10 +15,10 @@ import java.util.Date;
   */
 public class DateUtil {
 
-    private static final String DATE_FORMAT_PATTERN_0= "yyyyMMdd";
-    private static final String DATE_FORMAT_PATTERN_1= "yyyy/MM/dd";
-    private static final String DATE_FORMAT_PATTERN_2= "yyyy-MM-dd";
-    private static final String DATE_FORMAT_PATTERN_3= "yyyy-MM-dd HH:mm:ss";
+    private static final String DATE_FORMAT_PATTERN_0 = "yyyyMMdd";
+    private static final String DATE_FORMAT_PATTERN_1 = "yyyy/MM/dd";
+    private static final String DATE_FORMAT_PATTERN_2 = "yyyy-MM-dd";
+    private static final String DATE_FORMAT_PATTERN_3 = "yyyy-MM-dd HH:mm:ss";
 
     //将时间跟当前线程绑定
     private static ThreadLocal<SimpleDateFormat> threadLocal = new ThreadLocal<>();
