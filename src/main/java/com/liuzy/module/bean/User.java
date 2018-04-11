@@ -1,6 +1,8 @@
 package com.liuzy.module.bean;
 
- /**
+import java.io.Serializable;
+
+/**
   * @className: User
   * @package: com.liuzy.module.bean
   * @describe: 实体类Bean
@@ -8,7 +10,7 @@ package com.liuzy.module.bean;
   * @date: 2018/4/10
   * @time: 下午 7:16
   */
-public class User {
+public class User implements Serializable{
     private Integer id;
 
     private java.lang.String userName;//姓名
@@ -73,10 +75,9 @@ public class User {
     @Override
     public String toString() {
      return "id = " + id +
-             ", userName='" + userName + '\'' +
-             ", phoneNo='" + phoneNo + '\'' +
-             ", certNo='" + certNo + '\'' +
-             ", password='" + password + '\'' +
-             '}';
+             ", userName = '" + userName + '\'' +
+             ", phoneNo = '" + phoneNo + '\'' +
+             ", certNo = '" + certNo + '\'' +
+             ", password = '" + password + '\'' ;
     }
  }

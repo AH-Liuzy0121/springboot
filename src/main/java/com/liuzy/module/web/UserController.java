@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
   * @date: 2018/4/10
   * @time: 下午 7:24
   */
-
 @RestController
 @EnableAutoConfiguration
 public class UserController {
