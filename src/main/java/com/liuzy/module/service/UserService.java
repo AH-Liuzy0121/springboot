@@ -2,6 +2,9 @@ package com.liuzy.module.service;
 
 import com.liuzy.module.bean.User;
 import com.liuzy.module.dao.UserMapper;
+import com.liuzy.module.dao.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,11 +21,21 @@ import java.util.Collections;
 @Service
 public class UserService {
 
+    private static Logger logger = LoggerFactory.getLogger(UserService.class);
+
     @Autowired
     private UserMapper dao;
 
+    @Autowired
+    private UserRepository repository;
+
     public User searchUser(String phone) throws Exception{
 
-        return dao.searchUser(phone) == null ? null:dao.searchUser(phone);
+        return dao.searchUser(phone) == null?null:dao.searchUser(phone);
+    }
+
+    public User searchUserByPhone(String phone) throws Exception{
+
+        return repository.searchUser(phone) == null?null:repository.searchUser(phone);
     }
 }
