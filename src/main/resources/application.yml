@@ -22,3 +22,10 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     # 使用druid数据源
     type: com.alibaba.druid.pool.DruidDataSource
+
+
+#引入MongoDB
+ spring:
+　　data:
+　　　　mongodb:
+　　　　　　uri: mongodb://localhost:27017/test
