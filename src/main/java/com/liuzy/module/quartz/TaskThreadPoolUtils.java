@@ -130,6 +130,7 @@ public class TaskThreadPoolUtils {
         List<ResultDTO> result = new ArrayList<>();
         boolean flag = true;
         try{
+            openPool();
             int taskNum = tasks.size();
             List<Future<ResultDTO>> futures = new ArrayList<>(taskNum);
             //创建计数器
@@ -153,7 +154,7 @@ public class TaskThreadPoolUtils {
             e.printStackTrace();
             System.out.println("异常信息: " + e.getMessage());
         }finally {
-           openPool();
+            closePool();
 
            if(!flag){
                printErrorInfo(result,title);
@@ -183,6 +184,7 @@ public class TaskThreadPoolUtils {
         List<ResultDTO> result = new ArrayList<>();
         boolean flag = true;
         try{
+            openPool();
             int taskNum = tasks.size();
             List<Future<ResultDTO>> futures = new ArrayList<>(taskNum);
             //创建计数器
@@ -208,7 +210,7 @@ public class TaskThreadPoolUtils {
             e.printStackTrace();
             System.out.println("异常信息: " + e.getMessage());
         }finally {
-            openPool();
+            closePool();
 
             if(!flag){
                 printErrorInfo(result,title);
