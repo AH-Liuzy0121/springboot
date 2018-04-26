@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
   * @className: UserService
@@ -37,5 +40,10 @@ public class UserService {
     public User searchUserByPhone(String phone) throws Exception{
 
         return repository.searchUser(phone) == null?null:repository.searchUser(phone);
+    }
+
+    public List<HashMap<String,Object>> searchUserListByCertNo(Map<String,Object> searchParams)throws Exception{
+
+        return dao.searchUserListByCertNo(searchParams);
     }
 }

@@ -13,4 +13,6 @@ public class PublicConstant {
     public static final int RESULT_YES = 1;//执行结果成功
 
     public static final int RESULT_NO = 0;//执行结果失败
+
+    public static final int LIMIT_NUM  = 200;//每一批次只能执行LIMIT_NUM条
 }

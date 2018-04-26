@@ -81,5 +81,29 @@
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
-    
+
+
+    <select id="searchUserListByCertNo" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT
+              id,
+              user_name as userName,
+              phone,
+              cert_no as certNo,
+              password
+        FROM  user
+        WHERE id is not null
+            <if test="userName != null" >
+               and user_name = #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null" >
+                and phone = #{phone,jdbcType=VARCHAR},
+            </if>
+            <if test="birthNo != null" >
+                and cert_no = #{certNo,jdbcType=VARCHAR},
+                and substr(cert_no,11,4) = #{birthNo,jdbcType=VARCHAR}
+            </if>
+            <if test="password != null" >
+                and password = #{password,jdbcType=VARCHAR},
+            </if>
+    </select>
 </mapper>

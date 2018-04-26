@@ -2,6 +2,7 @@ package com.liuzy.module.dao;
 
 import com.liuzy.module.bean.User;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,5 +23,7 @@ public interface UserMapper {
     User searchUser(String phone);
 
     Long insertSelective(Map<String,Object> searchParams);
+
+    List<HashMap<String,Object>> searchUserListByCertNo(Map<String,Object> searchParams);
 
 }
