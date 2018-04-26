@@ -5,7 +5,7 @@ import java.util.concurrent.Callable;
 /**
  * @className: BatchTask
  * @package: com.liuzy.module.quartz
- * @describe: 多线程超类
+ * @describe: 线程超类
  * @auther: liuzhiyong
  * @date: 2018/4/25
  * @time: 下午 3:22
@@ -35,7 +35,11 @@ public class BatchTask implements Callable<ResultDTO>{
             TaskThreadPoolUtils.getInstance().getCountDownLatch().countDown();
         }
 
-        return new ResultDTO(this.taskId,threadId,result,"");
+        return packageResult(result,threadId,"");
+    }
+
+    public ResultDTO packageResult(int result,String threadId,String errorMsg){
+        return new ResultDTO(this.taskId,threadId,result,errorMsg);
     }
 
     public String getTaskId() {
