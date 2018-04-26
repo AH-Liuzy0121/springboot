@@ -23,6 +23,7 @@ public class BatchTask implements Callable<ResultDTO>{
         String threadId = thread.getName();//线程编号
         thread.setTaskId(this.taskId);
         int result = PublicConstant.RESULT_NO;
+        String errorMsg = null;
         try {
             System.out.println("-----业务执行:----- 任务编号: " + this.taskId + ", 线程编号: " + threadId);
             Thread.sleep(500);
@@ -35,7 +36,7 @@ public class BatchTask implements Callable<ResultDTO>{
             TaskThreadPoolUtils.getInstance().getCountDownLatch().countDown();
         }
 
-        return packageResult(result,threadId,"");
+        return packageResult(result,threadId,errorMsg);
     }
 
     public ResultDTO packageResult(int result,String threadId,String errorMsg){
