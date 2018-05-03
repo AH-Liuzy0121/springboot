@@ -1,4 +1,4 @@
-package com.liuzy.module.quartz;
+package com.liuzy.module.quartz.utils;
 
 /**
  * @className: PublicConstant

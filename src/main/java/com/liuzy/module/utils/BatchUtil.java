@@ -1,6 +1,6 @@
 package com.liuzy.module.utils;
 
-import com.liuzy.module.quartz.PublicConstant;
+import com.liuzy.module.quartz.utils.PublicConstant;
 import org.springframework.util.CollectionUtils;
 
 import java.util.ArrayList;

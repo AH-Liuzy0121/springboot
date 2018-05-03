@@ -1,4 +1,7 @@
-package com.liuzy.module.quartz;
+package com.liuzy.module.quartz.bean;
+
+import com.liuzy.module.quartz.utils.PublicConstant;
+import com.liuzy.module.quartz.utils.TaskThreadPoolUtils;
 
 import java.util.concurrent.Callable;
 

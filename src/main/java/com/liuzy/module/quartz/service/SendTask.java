@@ -1,5 +1,10 @@
-package com.liuzy.module.quartz;
+package com.liuzy.module.quartz.service;
 
+import com.liuzy.module.quartz.bean.BatchTask;
+import com.liuzy.module.quartz.bean.ResultDTO;
+import com.liuzy.module.quartz.bean.TaskThread;
+import com.liuzy.module.quartz.utils.PublicConstant;
+import com.liuzy.module.quartz.utils.TaskThreadPoolUtils;
 import com.liuzy.module.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,7 +20,7 @@ import java.util.List;
  * @date: 2018/4/26
  * @time: 下午 2:50
  */
-public class SendTask extends BatchTask{
+public class SendTask extends BatchTask {
     private static final Logger logger = LoggerFactory.getLogger(SendTask.class);
 
     //需要执行的Service服务

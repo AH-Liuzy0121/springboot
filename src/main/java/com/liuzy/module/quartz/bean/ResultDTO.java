@@ -1,4 +1,4 @@
-package com.liuzy.module.quartz;
+package com.liuzy.module.quartz.bean;
 
 import java.io.Serializable;
 import java.util.concurrent.Callable;

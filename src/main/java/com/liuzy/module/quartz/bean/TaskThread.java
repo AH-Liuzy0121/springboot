@@ -1,4 +1,6 @@
-package com.liuzy.module.quartz;
+package com.liuzy.module.quartz.bean;
+
+import com.liuzy.module.quartz.bean.BatchTask;
 
 /**
  * @className: TaskThread
